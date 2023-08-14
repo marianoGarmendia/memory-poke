@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #eee;
+  /* display: flex;
+    justify-content: center; */
+}
+
+.card-poke-container {
+  background-color: beige;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  /* height: 100vh; */
+  /* width: 90%; */
+  margin: auto;
+  margin-top: 30px;
+  max-width: 70%;
+  /* height: 100vh; */
+  border-radius: 7px;
+  padding: 15px;
+  justify-items: center;
+  /* border: solid #aaa; */
+  /* border-width: 1px; */
+  /* box-shadow: 0px 1px 2px black; */
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+}
+
+.card-poke {
+  background-color: white;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  /* height: 150px; */
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* .card-poke:hover {
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.2);
+  } */
+
+.card-poke-img {
+  display: flex;
+  justify-content: center;
+}
+
+.poke-img {
+  width: 100%;
+  max-width: 50%;
+  /* height: 100%; */
+  /* position: relative; */
+}
+/* Estilos del Nav y boton */
+
+.buttons-container {
+  /* border: solid 1px rgb(); */
+  max-width: 900px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 7px;
+  background-color: white;
+  box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.2);
+}
+
+.button-poke {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  /* font-family: "Staatliches", cursive; */
+  font-family: "Inconsolata", monospace;
+  font-size: 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  color: rgb(43, 43, 43);
+  /* color: white; */
+  background-color: rgba(248, 248, 55, 0.856);
+}
+
+.dorso-card {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  /* translate: -50%; */
+  /* opacity: 0.7; */
+  /* z-index: -1; */
+  /* transition: 0.5; */
+}
+
+.taping {
+  transition: 1s;
+  width: 0%;
+}
+/* .mostrar { */
+/* z-index: 1; */
+/* transition: 0.5; */
+/* } */
+/* .button-poke:hover {
+} */
