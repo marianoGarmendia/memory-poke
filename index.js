@@ -9,12 +9,13 @@ const url = "https://pokeapi.co/api/v2/pokemon";
 //     console.log(res);
 //   });
 
-const renderPoke = (imgPoke) => {
-  console.log(imgPoke);
+const renderPoke = (imgPoke, id) => {
+  // console.log(imgPoke);
   const article = document.createElement("article");
   article.classList.add("card-poke");
+  article.id = id;
   article.innerHTML = `
-  <div class="dorso-card"></div>
+  <div class="dorso-card"><span class="dorso-card-title">Memory Poke</span></div>
 
   <div class="card-poke-img">
           <img
@@ -26,18 +27,21 @@ const renderPoke = (imgPoke) => {
         
   `;
   const cardPokeContainer = document.querySelector(".card-poke-container");
-  // console.log(cardPokeContainer);
+
   cardPokeContainer.appendChild(article);
-  // const main = document.querySelector(".card-poke-container").children;
+
   const cards = Array.from(cardPokeContainer.children);
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       const dorsoCard = card.firstElementChild;
+      const dorsoCardTitle = dorsoCard.firstElementChild;
+
       dorsoCard.classList.add("taping");
+      dorsoCardTitle.classList.add("taping");
       setTimeout(() => {
         dorsoCard.classList.remove("taping");
-      }, 3000);
-      console.log(dorsoCard.classList);
+        dorsoCardTitle.classList.remove("taping");
+      }, 4000);
     });
   });
 };
@@ -62,7 +66,7 @@ const indicePoke = () => {
       i--;
     }
   }
-  console.log(posiciones);
+
   return [posiciones, [...indices, ...indices]];
 };
 
@@ -75,15 +79,14 @@ const selectPoke = () => {
       .then((res) => res.json())
       .then((data) => {
         const imgPoke = data.sprites.other.home.front_default;
-        console.log(imgPoke);
-        renderPoke(imgPoke);
+        const id = data.id;
+
+        renderPoke(imgPoke, id);
       });
   }
 };
 
 const button = document.querySelector(".button-poke");
 button.addEventListener("click", () => {
-  const num = Math.floor(Math.random() * 100);
-  console.log(num);
   selectPoke();
 });
