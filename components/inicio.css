@@ -1,0 +1,65 @@
+.index-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-height: 100vh; */
+}
+
+.container-inicio {
+  height: 90vh;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+}
+
+.texto-ingresar-nombre {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ingresar-nombre {
+  height: 70%;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+  border-radius: 7px;
+  font-size: 1.5rem;
+  background-color: white;
+  box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.2);
+  color: rgb(17, 16, 16);
+}
+
+.input {
+  padding: 20px;
+  border: none;
+  box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.2);
+}
+
+.input::placeholder {
+  font-family: "Pokemon Solid";
+  letter-spacing: 2px;
+}
+
+.guardar-jugador-btn {
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 1.5rem;
+  font-family: "Pokemon Hollow";
+  letter-spacing: 2px;
+  background-color: red;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.guardar-jugador-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
